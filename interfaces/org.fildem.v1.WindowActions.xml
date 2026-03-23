@@ -1,0 +1,22 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+  "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.fildem.v1.WindowActions">
+    <method name="SetWindowActions">
+      <arg name="window_uid" type="s" direction="in"/>
+      <arg name="actions" type="as" direction="in"/>
+    </method>
+    <method name="ListWindowActions">
+      <arg name="window_uid" type="s" direction="in"/>
+      <arg name="actions" type="as" direction="out"/>
+    </method>
+    <method name="ActivateWindowAction">
+      <arg name="window_uid" type="s" direction="in"/>
+      <arg name="action_id" type="s" direction="in"/>
+    </method>
+    <signal name="WindowActionsChanged">
+      <arg name="window_uid" type="s"/>
+      <arg name="actions" type="as"/>
+    </signal>
+  </interface>
+</node>

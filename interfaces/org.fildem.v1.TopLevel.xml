@@ -1,0 +1,18 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+  "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.fildem.v1.TopLevel">
+    <method name="SetTopLevel">
+      <arg name="window_uid" type="s" direction="in"/>
+      <arg name="items" type="aa{sv}" direction="in"/>
+    </method>
+    <method name="GetTopLevel">
+      <arg name="window_uid" type="s" direction="in"/>
+      <arg name="items" type="aa{sv}" direction="out"/>
+    </method>
+    <signal name="TopLevelChanged">
+      <arg name="window_uid" type="s"/>
+      <arg name="items" type="aa{sv}"/>
+    </signal>
+  </interface>
+</node>

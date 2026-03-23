@@ -1,0 +1,25 @@
+pkgname=fildem-rewrite
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Fildem rewrite: daemon, HUD and GNOME Shell extension for GNOME 48+"
+arch=('x86_64')
+url="https://github.com/gonzaarcr/Fildem"
+license=('GPL3')
+depends=('glib2' 'gtk4' 'gnome-shell')
+makedepends=('meson' 'ninja' 'gcc' 'pkgconf')
+source=()
+sha256sums=()
+
+build() {
+  meson setup build \
+    --prefix /usr
+  meson compile -C build
+}
+
+check() {
+  meson test -C build
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Fildem Shell (Rewrite)",
+  "description": "Global menu and HUD bridge for GNOME 48+",
+  "uuid": "fildem-shell@fildem.org",
+  "url": "https://github.com/gonzaarcr/Fildem",
+  "shell-version": [
+    "48",
+    "49"
+  ],
+  "settings-schema": "org.fildem.shell",
+  "gettext-domain": "fildem"
+}

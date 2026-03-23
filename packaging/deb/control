@@ -1,0 +1,13 @@
+Source: fildem-rewrite
+Section: gnome
+Priority: optional
+Maintainer: Fildem Maintainers <maintainers@fildem.org>
+Build-Depends: debhelper-compat (= 13), meson, ninja-build, pkg-config, libglib2.0-dev, libgtk-4-dev
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: fildem-rewrite
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gnome-shell
+Description: Fildem rewrite for GNOME 48+
+ Daemon, HUD and GNOME Shell extension rewrite based on org.fildem.v1 API.
