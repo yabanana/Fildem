@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Fildem HUD
+Exec=fildemhud
+Terminal=false
+Categories=Utility;

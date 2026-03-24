@@ -1,0 +1,20 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+  "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.fildem.v1.MenuTree">
+    <method name="SetMenuTree">
+      <arg name="window_uid" type="s" direction="in"/>
+      <arg name="nodes" type="aa{sv}" direction="in"/>
+    </method>
+    <method name="GetMenuTree">
+      <arg name="window_uid" type="s" direction="in"/>
+      <arg name="nodes" type="aa{sv}" direction="out"/>
+    </method>
+    <method name="InvalidateMenuTree">
+      <arg name="window_uid" type="s" direction="in"/>
+    </method>
+    <signal name="MenuTreeChanged">
+      <arg name="window_uid" type="s"/>
+    </signal>
+  </interface>
+</node>

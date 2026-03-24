@@ -1,0 +1,18 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+  "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.fildem.v1.Activation">
+    <method name="ActivateTopLevel">
+      <arg name="window_uid" type="s" direction="in"/>
+      <arg name="top_level_id" type="s" direction="in"/>
+    </method>
+    <method name="ActivateMenuItem">
+      <arg name="window_uid" type="s" direction="in"/>
+      <arg name="item_id" type="s" direction="in"/>
+    </method>
+    <signal name="ActivationRequested">
+      <arg name="window_uid" type="s"/>
+      <arg name="target_id" type="s"/>
+    </signal>
+  </interface>
+</node>

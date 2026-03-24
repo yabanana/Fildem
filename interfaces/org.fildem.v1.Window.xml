@@ -1,0 +1,15 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+  "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.fildem.v1.Window">
+    <method name="UpdateActiveWindow">
+      <arg name="context" type="a{sv}" direction="in"/>
+    </method>
+    <method name="GetActiveWindow">
+      <arg name="context" type="a{sv}" direction="out"/>
+    </method>
+    <signal name="ActiveWindowChanged">
+      <arg name="context" type="a{sv}"/>
+    </signal>
+  </interface>
+</node>

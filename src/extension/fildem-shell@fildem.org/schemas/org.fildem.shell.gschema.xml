@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="fildem">
+  <schema id="org.fildem.shell" path="/org/fildem/shell/">
+    <key name="visibility-mode" type="i">
+      <range min="0" max="2"/>
+      <default>0</default>
+      <summary>Panel menu visibility mode</summary>
+      <description>0 auto, 1 always visible, 2 only on hover.</description>
+    </key>
+    <key name="show-app-label-when-menu-visible" type="b">
+      <default>false</default>
+      <summary>Show app label while top-level menus are visible</summary>
+    </key>
+    <key name="button-padding" type="i">
+      <range min="0" max="24"/>
+      <default>6</default>
+      <summary>Horizontal padding for top-level menu buttons</summary>
+    </key>
+    <key name="hud-shortcut" type="as">
+      <default>["&lt;Alt&gt;space"]</default>
+      <summary>Shortcut used to open the Fildem HUD</summary>
+      <description>Single accelerator in GNOME format, for example &lt;Alt&gt;space.</description>
+    </key>
+  </schema>
+</schemalist>
